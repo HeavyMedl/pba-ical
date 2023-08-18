@@ -2,12 +2,13 @@
   "name": "pba-ical",
   "version": "1.0.0",
   "private": true,
+  "description": "Scapes PBA tournaments and generates an importable iCalendar (ICS)",
   "type": "module",
   "scripts": {
     "execute": "npm run excecute:all",
     "execute:all": "tsc && npm run execute:scrape && npm run execute:ics",
-    "execute:scrape": "npx vite-node src/scrape.ts",
-    "execute:ics": "npx vite-node src/ics.ts"
+    "execute:ics": "npx vite-node src/ics.ts",
+    "execute:scrape": "npx vite-node src/scrape.ts"
   },
   "dependencies": {
     "@types/node": "^20.5.0",
