@@ -36,8 +36,19 @@ const logger = LoggerFactory({ level: 'info' });
       ],
       title,
     };
+    event.description = '';
+    if (region) {
+      event.description += `Region: ${region}\n`;
+    }
+    if (location) {
+      event.description += `Location: ${location}\n`;
+    }
+    if (moreInfo.oilPattern) {
+      event.description += `Oil pattern: ${moreInfo.oilPattern}\n`;
+    }
     if (moreInfo.link) {
       event.url = moreInfo.link;
+      event.description += `More info: ${moreInfo.link}\n`;
     }
     if (moreInfo.hostCenter) {
       const { hostCenter } = moreInfo;
@@ -57,12 +68,8 @@ const logger = LoggerFactory({ level: 'info' });
     if (moreInfo.prizeFund) {
       htmlContent += moreInfo.prizeFund;
     }
-    if (moreInfo.oilPattern) {
-      //
-    }
     event.busyStatus = 'FREE';
     event.categories = ['bowling', 'indoor sports'];
-    // event.description = ''
     event.htmlContent = htmlContent;
     events.push(event);
   });
