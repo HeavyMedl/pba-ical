@@ -35,20 +35,21 @@ const logger = LoggerFactory({ level: 'info' });
         endDate.getUTCDate(),
       ],
       title,
+      calName: 'PBA tournaments',
     };
-    event.description = 'Region: test region Location: test location';
-    // if (region) {
-    //   event.description += `Region: ${region}\n`;
-    // }
-    // if (location) {
-    //   event.description += `Location: ${location}\n`;
-    // }
-    // if (moreInfo.oilPattern) {
-    //   event.description += `Oil pattern: ${moreInfo.oilPattern}\n`;
-    // }
+    event.description = '';
+    if (region) {
+      event.description += `Region: ${region} `;
+    }
+    if (location) {
+      event.description += `Location: ${location} `;
+    }
+    if (moreInfo.oilPattern) {
+      event.description += `Oil pattern: ${moreInfo.oilPattern} `;
+    }
     if (moreInfo.link) {
       event.url = moreInfo.link;
-      // event.description += `More info: ${moreInfo.link}\n`;
+      event.description += `More info: ${moreInfo.link} `;
     }
     if (moreInfo.hostCenter) {
       const { hostCenter } = moreInfo;
