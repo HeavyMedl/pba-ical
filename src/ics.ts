@@ -36,7 +36,7 @@ const logger = LoggerFactory({ level: 'info' });
       ],
       title,
     };
-    event.description = 'Region: test region\nLocation: test location';
+    event.description = 'Region: test region Location: test location';
     // if (region) {
     //   event.description += `Region: ${region}\n`;
     // }
