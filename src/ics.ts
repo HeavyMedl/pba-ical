@@ -36,6 +36,7 @@ const logger = LoggerFactory({ level: 'info' });
       ],
       title,
     };
+    event.description = '';
     if (region) {
       event.description += `Region: ${region}\\n`;
     }
