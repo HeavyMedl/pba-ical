@@ -39,13 +39,13 @@ const logger = LoggerFactory({ level: 'info' });
     };
     event.description = '';
     if (region) {
-      event.description += `Region: ${region} `;
+      event.description += `Region: ${region}\r\n`;
     }
     if (location) {
-      event.description += `Location: ${location} `;
+      event.description += `Location: ${location}\r\n`;
     }
     if (moreInfo.oilPattern) {
-      event.description += `Oil pattern: ${moreInfo.oilPattern} `;
+      event.description += `Oil pattern: ${moreInfo.oilPattern}\r\n`;
     }
     if (moreInfo.link) {
       event.url = moreInfo.link;
