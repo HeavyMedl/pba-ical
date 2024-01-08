@@ -18,7 +18,7 @@ I'm using `jsdelivr` as a CDN for the ICS file which allows me to version each "
 
 Use the latest release's semver:
 
-https://cdn.jsdelivr.net/gh/HeavyMedl/pba-ical@1.0.0/pba-tournaments.ics
+https://cdn.jsdelivr.net/gh/HeavyMedl/pba-ical@2.0.0/pba-tournaments.ics
 
 Feel free to fork this repo and host your own!
 
